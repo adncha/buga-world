@@ -1,0 +1,40 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+  "env": {
+    "node": true,
+    "jest": true,
+    "commonjs": true,
+    "es6": true,
+    "browser": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    },
+    "requireConfigFile": false
+  },
+  "rules": {
+    "prettier/prettier": ["error",
+      {
+        "endOfLine":"auto",
+        "singleQuote": true,
+        "trailingComma": "none",
+        "bracketSpacing": false,
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
+        "htmlWhitespaceSensitivity": "ignore",
+        "jsxBracketSameLine": true,
+        "printWidth": 100,
+        "semi": false
+      }],
+    "react/jsx-first-prop-new-line": [1, "multiline"],
+    "react/jsx-max-props-per-line": [1,
+      {
+        "maximum": 4
+      }
+    ],
+    "react/no-unescaped-entities": 0,
+    "import/no-extraneous-dependencnies": 0,
+    "react/prop-types": 0
+  }
+}
